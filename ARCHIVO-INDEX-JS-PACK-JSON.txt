@@ -1,0 +1,285 @@
+ARCHIVO INDEX.JS
+================================================================
+Estos son los pasos que seguirá para crear un archivo index.js: 
+
+Dirígete al sitio web de Node.js, descarga e instala el archivo del paquete de nodo. 
+Cree una nueva carpeta de proyecto en su directorio de trabajo. 
+Navegue hasta la ubicación del proyecto en su terminal y ejecute npm init -y. 
+El comando anterior producirá un archivo package.json con los códigos siguientes dentro de él.
+
+
+
+============================
+const http = require("http"); 
+//create a server object: 
+http 
+  .createServer(function (req, res) { 
+    res.write("<h1>Hello World!</h1>");  
+    //write a response to the client 
+     
+    res.end();  
+    //end the response 
+  }) 
+  .listen(8080);  
+//Server runs on localhost:8080 
+======================================================================================================
+
+Estos son los pasos que seguirá para crear un archivo index.js: 
+
+Dirígete al sitio web de Node.js, descarga e instala el archivo del paquete de nodo. 
+Cree una nueva carpeta de proyecto en su directorio de trabajo. 
+Navegue hasta la ubicación del proyecto en su terminal y ejecute npm init -y. 
+El comando anterior producirá un archivo package.json con los códigos siguientes dentro de él.
+
+{ 
+  "nombre": "nodejs", 
+  "versión": "1.0.0", 
+  "descripción": "", 
+  "principal": "index.js", 
+  "guiones": { 
+    "prueba": "echo \"Error: no se ha especificado ninguna prueba\" && salida 1" 
+  }, 
+  "palabras clave": [], 
+  "autor": "", 
+  "licencia": "ISC" 
+}
+Copiar código
+Abra el proyecto en un editor de código como sublime o vs code. 
+Cree un archivo index.js dentro de la carpeta de su proyecto. 
+Pegue los códigos a continuación dentro del archivo index.js. 
+const http = requerir("http"); 
+//crea un objeto de servidor: 
+http 
+  .createServer(función (solicitud, res) { 
+    res.write("<h1>¡Hola mundo!</h1>");  
+    //escribir una respuesta al cliente 
+     
+    res.end();  
+    //finaliza la respuesta 
+  }) 
+  .escuchar(8080);  
+//El servidor se ejecuta en localhost:8080
+Código copiado
+Ejecute su servidor en la terminal usando el nodo index.js.  
+Visite su navegador en localhost:8080. 
+Node.js incluye un módulo HTTP que le permite crear un servidor y entregar contenido a una dirección específica. 
+Simplemente creamos un servidor web en el código anterior que escribe una etiqueta de encabezado de " Hola mundo" en la pantalla y la envía a la dirección localhost:8080 . 
+Cuando el código anterior se ejecuta a través de un navegador, produce el siguiente resultado. 
+
+
+
+Si desea tomar el atajo para ampliar sus habilidades de backend con Node.js, le recomendamos que se una a la certificación de desarrollador web full stack de Knowledgehut . 
+
+Nodo Index.js: uso
+Usar Node.js es fácil. Demostremos su uso creando un sitio web simple que tenga tres páginas. La página de índice, 
+acerca de y las páginas del mapa del sitio para ser precisos. 
+
+Ejemplo 1: creación de un sitio web sencillo
+Siga los pasos a continuación para crear un sitio web simple usando Node.js; 
+incluiremos el CSS que se importará desde una red de entrega de contenido (CDN). 
+
+Paso 1: 
+
+Cree una nueva carpeta de proyecto y ejecute el siguiente código a través de la terminal. Asegúrese de cambiar su directorio a esta carpeta de proyecto. 
+
+inicio npm -y
+Copiar código
+Paso 2: 
+
+Instale Express, un marco de aplicaciones web Node.js que ofrece muchas funciones para crear aplicaciones web y móviles. 
+
+instalación npm --guardar expreso 
+=================================
+npm install --save express 
+
+Paso 3: 
+
+Copie y pegue los códigos a continuación dentro del archivo index.js. 
+
+// Importar bibliotecas esenciales 
+const expresar = requerir('expresar'); 
+aplicación constante = expresar(); 
+ruta constante = requerir('ruta'); 
+enrutador constante = express.Router(); 
+// Configurar rutas esenciales 
+enrutador.get('/', función(solicitud, res) { 
+    res.sendFile(path.join(__dirname + '/index.html')); 
+    //__dirname: se resolverá en la carpeta de su proyecto. 
+}); 
+router.get('/acerca de', función(solicitud, res) { 
+    res.sendFile(path.join(__dirname + '/about.html')); 
+}); 
+router.get('/mapa del sitio', función(req, res) { 
+    res.sendFile(path.join(__dirname + '/sitemap.html')); 
+}); 
+//agregar el enrutador 
+app.use('/', enrutador); 
+aplicación.listen(proceso.env.port || 3000); 
+console.log('Ejecutando en el puerto 3000');
+Copiar código
+El objeto del enrutador se obtuvo del marco Express que instalamos recientemente. 
+Nos permite especificar en qué ubicación queremos que se ejecuten ciertos archivos y códigos. 
+
+Etapa 4: 
+
+Cree un archivo index.html y pegue los siguientes códigos en su interior. 
+Los códigos también incluyen un enlace CDN de arranque que resuelve todas nuestras necesidades de estilo CSS. 
+
+<html> 
+<cabeza> 
+    <título>HTML expreso</título> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <enlace rel="hoja de estilo" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
+</cabeza> 
+<cuerpo> 
+    <div estilo="margen:100px;"> 
+        class="barra de navegación barra de navegación-barra de navegación inversa-estática-top"> 
+        <div class="contenedor"> 
+            <a class="navbar-brand" href="/">HTML exprés</a> 
+            <ul class="nav barra de navegación-nav"> 
+                <li clase="activo"> 
+                    <a href="/">Inicio</a> 
+                </li> 
+                <li> 
+                    <a href="/about">Acerca de</a> 
+                </li> 
+                <li> 
+                    <a href="/sitemap">Mapa del sitio</a> 
+                </li> 
+            </ul> 
+        </div> 
+        </nav> 
+        <div class="jumbotron" style="padding:40px;"> 
+            <h1>¡Hola mundo!</h1> 
+            <p>Esta es una unidad de héroe simple, un componente simple estilo jumbotron para llamar la atención sobre el contenido o la información destacados.</p> 
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Más información</a></p> 
+        </div> 
+    </div> 
+</cuerpo> 
+</html>
+Copiar código
+Tenga en cuenta que todas las clases de CSS, como "btn, btn-primary, btn-lg", provienen de los archivos CSS importados. 
+
+Paso 5: 
+
+Ejecute el código en la terminal usando el nodo index.js, luego véalo en el navegador a través de localhost:3000. Vea la imagen a continuación. 
+
+
+
+Ejemplo 2: obtener recursos web utilizando Axios
+Aquí hay otra forma de utilizar el archivo index.js en NodeJs. Usemos Axios para recuperar una gran cantidad de usuarios del sitio web Jsonplaceholder. 
+
+NodeJs tiene un módulo HTTPS nativo que puede ayudarle a realizar llamadas API en línea, pero Axios es fantástico y su uso es sencillo. Además, muchos desarrolladores lo utilizan como su paquete número uno para todo lo relacionado con la realización de llamadas API. Para usarlo, siga los pasos a continuación: 
+
+Paso 1: 
+
+Abra la terminal en el directorio de su proyecto. 
+
+Paso 2: 
+
+Ejecute npm install Axios en la terminal para instalar el paquete. 
+
+Paso 3: 
+
+Cree un archivo index.js en la carpeta raíz de su proyecto y pegue los códigos debajo de él. 
+
+// importar axios 
+const axios = requerir('axios'); 
+// Especifica una ubicación de recurso 
+const recurso = 'https://jsonplaceholder.typicode.com/users'; 
+axios 
+  .obtener(recurso) 
+  .entonces(usuarios => console.log(usuarios)) 
+  .catch(error => console.log(error));
+Copiar código
+Etapa 4: 
+
+Ejecute node index.js en su terminal y observe el resultado, vea la imagen a continuación. 
+
+
+
+Ejemplo 3: creación de un temporizador de cuenta regresiva 
+Aquí hay otro uso de index.js en Node.js. Construyamos un temporizador para una cuenta regresiva cada segundo a partir de 50. 
+
+dejar tiempo = 50; 
+let cuenta regresiva = setInterval(actualización, 1000); 
+actualización de función() { 
+    let min = Math.floor(tiempo / 60); 
+    let seg = tiempo % 60; 
+   
+    console.log(`${min}:${sec}`); 
+    tiempo--; 
+   
+    si (min == 0 && seg == 0)        
+      clearInterval(cuenta regresiva); 
+}
+Copiar código
+
+
+Nodo Index.js: Implementación
+Tenemos una sorpresa más para ti sobre cómo crear un index.js en Node.js, y esta vez es a través de un paquete llamado create-index. Si desea crear un paquete de módulos ES6 y desea agrupar rápidamente los archivos antes de enviarlos en línea, el paquete `create-index` le resultará muy útil. ¿Como lo usas? Siga los pasos a continuación: 
+
+Paso 1: 
+
+Ejecute npm install create-index para instalar el paquete en su proyecto. 
+
+Paso 2: 
+
+Cree un archivo de entrada de índice ejecutando este comando npx create-index ./ en la terminal. 
+
+
+
+El comando anterior creará un archivo index.js y agregará una línea de código como se puede ver en el siguiente fragmento: 
+
+// @crear-indice
+Copiar código
+Paso 3: 
+
+Cree los archivos que se incluirán para la exportación. Estos archivos son los que desea agrupar como un solo paquete. Créelos en la raíz del proyecto, escriba toda su lógica, clases y funciones en estos archivos. Puede utilizar el siguiente comando: 
+
+toque foo.js bar.js baz.js
+Copiar código
+Todo el código anterior debería estar alineado de forma similar al bloque siguiente: 
+
+./ 
+  - bar.js 
+  - baz.js 
+  -foo.js 
+  - index.js
+Copiar código
+Etapa 4: 
+
+Agrúpelos ejecutando npx create-index ./ una vez más en la terminal y obtendrá un resultado similar al de la imagen a continuación. 
+
+
+
+Cómo ignorar archivos al actualizar
+Por muchas razones, es posible que desee excluir algunos archivos de la lista del archivo index.js. Para lograr esto, cambie el comentario en el archivo index.js al que se ve en el bloque a continuación: 
+
+// @create-index {"ignorar": ["/baz.js$/"]}
+Copiar código
+A continuación, ejecute npx create-index --update ./index.js en la terminal y el resultado debería verse como el siguiente: 
+
+
+
+Y ahí lo tienes sobre cómo crear un index.js en Node.js. 
+
+¿Buscas impulsar tu carrera? Descubra las infinitas oportunidades laborales que conlleva dominar Python . ¡Únase a nuestro curso de Python hoy!
+
+Conclusión
+Hemos llegado al final de este tutorial; con suerte, habrá comprendido un poco cómo crear archivos index.js en Node.js. Tenemos muchos más tutoriales como este en KnowledgeHut. Verifique el costo de la certificación Node.js de KnowledgeHut y aprenda Node o incluso mejore sus habilidades mientras obtiene la certificación. 
+
+Preguntas frecuentes (FAQ)
+1 . ¿Cómo puedo ejecutar el archivo Index.js en Node?
+En el directorio del proyecto, simplemente ejecute node index.js en la terminal para ejecutar el archivo y asegúrese de que su terminal apunte a la misma ubicación que el archivo de índice. 
+
+2 . ¿Qué es Index.js en Node?
+Un archivo index.js se denomina archivo de entrada para una aplicación Node.js. Cuando se inicia un servidor con Node, el valor predeterminado es el archivo index.js, excepto que se reconfigura. 
+
+3 . ¿Cómo puedo escribir el módulo Node.js?
+Hay muchas formas de escribir un módulo Node.js, pero para simplificar y automatizar, puede usar el paquete npm create-index. 
+
+4 . ¿Cuál es el proceso para crear un archivo Node.js?
+Una vez que el paquete create-index esté instalado en su proyecto, simplemente ejecutar npx create-index ./ en la terminal creará un archivo index.js para usted. 
