@@ -2,7 +2,7 @@
 #Portal Ciudadano ucn
 
 <p align="center">
-  <img src="res/logoucn.png">
+  <img src="ucn/res/logoucn.png">
 </p>
 
 <p align="center">
