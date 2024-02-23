@@ -2,7 +2,7 @@
 <h1>Union Ciudadana Nacional</h1>
 <h3>Saldos Cuenta Individual de Ahorro Administradoras de Fondos Pensionales<br>
 Ley 100 de 1993 Artuculo 63</h3>
-  <a href="https://bit.ly/m/saldosafp">Sigue este Link...<img height="180" width="180" src="ucn/res/logoucn.png"></a>
+  <a href="https://bit.ly/m/saldosafp">Sigue este Link...<img height="180" width="180" src="ucn/res/logoucnal.png"></a>
 </p>
 
 
