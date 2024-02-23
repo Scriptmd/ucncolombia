@@ -6,14 +6,16 @@ Ley 100 de 1993 Artuculo 63</h3>
 <BR>VER VIDEO <BR>
 https://www.youtube.com/embed/p4WbJzdgNoc?si=68GPy_wWw20N_BC_
 </p>
-## GitHub Actions Toolkit
+
+
+# GitHub Actions Toolkit
 The GitHub Actions ToolKit provides a set of packages to make creating actions easier.
 
 <br/>
 <h3 align="center">Get started with the <a href="https://github.com/actions/javascript-action">javascript-action template</a>!</h3>
 <br/>
 
-## Packages
+# Packages
 
 :heavy_check_mark: [@actions/core](packages/core)
 
