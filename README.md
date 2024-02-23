@@ -7,7 +7,7 @@ Ley 100 de 1993 Artuculo 63</h3>
 
 
 ## GitHub Actions Toolkit
-<video src="ucn/img/APORTES-PENSIONALES.mp4" poster="ucn/res/logoucnal.png" preload="metadata" controls></video>
+<video src="ucn/img/APORTES-PENSIONALES.mp4" width="360" height="640"></video>
 The GitHub Actions ToolKit provides a set of packages to make creating actions easier.
 
 <br/>
